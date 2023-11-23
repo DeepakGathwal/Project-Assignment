@@ -8,12 +8,21 @@ const ErrorHandler = require('./middelwares/error')
 dotenv.config({path:'./config/.env'});
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(body.urlencoded({ extended: true }));
 
-app.use(cors({credentials:true,  origin: "*",
-    allowedHeaders: "Authorization",  methods: "GET,POST,PUT,DELETE",}))
+
+app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    allowedHeaders: "Authorization",
+  })
+);
+
 app.use(cookieParser())
-app.use(express.json())
-app.use(body.urlencoded({extended:false}))
+
 connection();
 app.use("/upload", express.static("./upload"))
 const User = require('./routes/Userroute');

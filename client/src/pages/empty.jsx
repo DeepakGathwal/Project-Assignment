@@ -15,7 +15,7 @@ const allData = async() =>{
     {post.length > 0 && post.map((el, index) => (
       <div key={index} className='bg-white border-bottom col-4 col-center m-5 text-center rounded overflow-hidden'>
         <div className=" p-4 ">
-    <img className='m-2' src={`http://localhost:8080/upload/${el.owner.image}`} alt='User Profile Pic' style={{borderRadius:"50%", height:"45px", width:'45px'}}/>
+    <img className='m-2' src={`https://gathwal-memories-2.onrender.com/upload/${el.owner.image}`} alt='User Profile Pic' style={{borderRadius:"50%", height:"45px", width:'45px'}}/>
 
           <h3 className='word-wrap'>{el.title}</h3>
           <p className='text-truncate ms-2'>{el.description}</p>

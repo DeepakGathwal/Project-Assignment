@@ -24,7 +24,7 @@ const userLogout = async() =>{
 <div className='d-flex flex-row bg-primary justify-content-evenly'>
    <div className='d-flex flex-row'>
    <h1 className='text-white '>{user.user.fullName}</h1>
-    <img className='m-2' src={`http://localhost:8080/upload/${user.user.image}`} alt='User Profile Pic' style={{borderRadius:"50%", height:"45px", width:'45px'}}/>
+    <img className='m-2' src={`https://gathwal-memories-2.onrender.com/upload/${user.user.image}`} alt='User Profile Pic' style={{borderRadius:"50%", height:"45px", width:'45px'}}/>
 
    </div>
        <h2 className='text-black mt-1'>Daily Though</h2>

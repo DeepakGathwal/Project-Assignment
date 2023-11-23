@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(body.urlencoded({ extended: true }));
 
-app.use(cors({credentials:true, origin:"http://localhost:3000", methods: "GET,POST,PUT,DELETE",}))
+app.use(cors({credentials:true, origin:"https://project-assignment-qm75.vercel.app", methods: "GET,POST,PUT,DELETE",}))
 
 
 app.use(cookieParser());

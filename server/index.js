@@ -9,7 +9,8 @@ dotenv.config({path:'./config/.env'});
 
 const app = express();
 
-app.use(cors({credentials:true, origin:"http://localhost:3000",  methods: "GET,POST,PUT,DELETE",}))
+app.use(cors({credentials:true,  origin: "*",
+    allowedHeaders: "Authorization",  methods: "GET,POST,PUT,DELETE",}))
 app.use(cookieParser())
 app.use(express.json())
 app.use(body.urlencoded({extended:false}))
